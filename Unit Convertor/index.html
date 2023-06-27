@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        <div class="box">
+          <a href="#" onclick="showConverter('length');">Length</a>
+          <a href="#" onclick="showConverter('temperature');">Temperature</a>
+          <a href="#" onclick="showConverter('weight');">Weight</a>
+          <a href="#" onclick="showConverter('time');">Time</a>
+          <a href="#" onclick="showConverter('volume');">Volume</a>
+        </div>
+        <div id="length" class="section">
+          <h2>Length Converter</h2>
+          <div class="input-container">
+            <input type="number" id="length-input" placeholder="Enter length value">
+            <select id="length-select-from">
+              <option value="meter">Meter</option>
+              <option value="kilometer">Kilometer</option>
+              <option value="miles">Miles</option>
+              <option value="foot">Foot</option>
+            </select>
+            <span>to</span>
+            <select id="length-select-to">
+                <option value="meter">Meter</option>
+              <option value="kilometer">Kilometer</option>
+              <option value="miles">Miles</option>
+              <option value="foot">Foot</option>
+            </select>
+          </div>
+          <button id="length-convert-btn" onclick="convert('length')">Convert</button>
+          <p>Result: <span id="length-result"></span></p>
+        </div>
+        <div id="temperature" class="section">
+          <h2>Temperature Converter</h2>
+          <div class="input-container">
+            <input type="number" id="temperature-input" placeholder="Enter temperature value">
+            <select id="temperature-select-from">
+              <option value="celsius">Celsius</option>
+              <option value="fahrenheit">Fahrenheit</option>
+              <option value="kelvin">Kelvin</option>
+            </select>
+            <span>to</span>
+            <select id="temperature-select-to">
+                <option value="celsius">Celsius</option>
+              <option value="fahrenheit">Fahrenheit</option>
+              <option value="kelvin">Kelvin</option>
+            </select>
+        </div>
+        <button id="temperature-convert-btn" onclick="convert('temperature')">Convert</button>
+        <p>Result: <span id="temperature-result"></span></p>
+      </div>
+      <div id="weight" class="section">
+        <h2>Weight Converter</h2>
+        <div class="input-container">
+          <input type="number" id="weight-input" placeholder="Enter weight value">
+          <select id="weight-select-from">
+            <option value="kilogram">Kilogram</option>
+            <option value="gram">Gram</option>
+            <option value="pound">Pound</option>
+            <option value="ounce">Ounce</option>
+          </select>
+          <span>to</span>
+          <select id="weight-select-to">
+              <option value="kilogram">Kilogram</option>
+            <option value="gram">Gram</option>
+            <option value="pound">Pound</option>
+            <option value="ounce">Ounce</option>
+          </select>
+        </div>
+        <button id="weight-convert-btn" onclick="convert('weight')">Convert</button>
+        <p>Result: <span id="weight-result"></span></p>
+      </div>
+      <div id="time" class="section">
+        <h2>Time Converter</h2>
+        <div class="input-container">
+          <input type="number" id="time-input" placeholder="Enter time value">
+          <select id="time-select-from">
+            <option value="second">Second</option>
+            <option value="minute">Minute</option>
+            <option value="hour">Hour</option>
+            <option value="day">Day</option>
+          </select>
+          <span>to</span>
+          <select id="time-select-to">
+            <option value="second">Second</option>
+            <option value="minute">Minute</option>
+            <option value="hour">Hour</option>
+            <option value="day">Day</option>
+          </select>
+        </div>
+        <button id="time-convert-btn" onclick="convert('time')">Convert</button>
+        <p>Result: <span id="time-result"></span></p>
+      </div>
+      <div id="volume" class="section">
+        <h2>Volume Converter</h2>
+        <div class="input-container">
+          <input type="number" id="volume-input" placeholder="Enter volume value">
+          <select id="volume-select-from">
+            <option value="liter">Liter</option>
+            <option value="milliliter">Milliliter</option>
+            <option value="gallon">Gallon</option>
+            <option value="fluidounce">Fluid Ounce</option>
+          </select>
+          <span>to</span>
+          <select id="volume-select-to">
+            <option value="liter">Liter</option>
+            <option value="milliliter">Milliliter</option>
+            <option value="gallon">Gallon</option>
+            <option value="fluidounce">Fluid Ounce</option>
+          </select>
+        </div>
+        <button id="volume-convert-btn" onclick="convert('volume')">Convert</button>
+        <p>Result: <span id="volume-result"></span></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
